@@ -22,7 +22,7 @@ const listener = app.listen(process.env.PORT, () => {
 const Discord = require ("discord.js")
 const moment = require ("moment")
 const jano = new Discord.Client();
-const prefix = "j!";
+const prefix = "w!";
 
 
 tony.login("Nzk5MjI4MTc5Nzg0Nzk0MTgz.YAAhPw.G1toaOZWt7G_qGob9xqSoGA96co");
@@ -56,7 +56,7 @@ const embed = new Discord.MessageEmbed()
 **[ click here ](https://discord.gg/3wykSpqjZq)**
  `)
     
-    .setFooter(` System bot ✨ | Coded by , tony`, tony.user.avatarURL)
+    .setFooter(` welcome bot ✨ | Coded by , tony`, tony.user.avatarURL)
     .setURL("https://discord.gg/3wykSpqjZq")
       
     message.channel.send(embed);
