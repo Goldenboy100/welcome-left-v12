@@ -25,13 +25,13 @@ const jano = new Discord.Client();
 const prefix = "j!";
 
 
-jano.login("Nzk5MjI4MTc5Nzg0Nzk0MTgz.YAAhPw.G1toaOZWt7G_qGob9xqSoGA96co");
-jano.on("ready", async () => {
-  console.log(`Logged in as ${jano.user.username}!`);
-  jano.user.setStatus("ONLINE");
-  jano.user.setActivity(`${prefix}help`, { type: "WATCHING" });
-  jano.guilds.cache.forEach(g => {
-    if (g.member(jano.user).hasPermission("ADMINISTRATOR")) {
+tony.login("Nzk5MjI4MTc5Nzg0Nzk0MTgz.YAAhPw.G1toaOZWt7G_qGob9xqSoGA96co");
+tony.on("ready", async () => {
+  console.log(`Logged in as ${tony.user.username}!`);
+ tony.user.setStatus("ONLINE");
+  tony.user.setActivity(`${prefix}help`, { type: "WATCHING" });
+ tony.guilds.cache.forEach(g => {
+    if (g.member(tony.user).hasPermission("ADMINISTRATOR")) {
       g.fetchInvites().then(guildInvites => {});
     }
   });
@@ -39,7 +39,7 @@ jano.on("ready", async () => {
 
 //////////
 
-jano.on("message", message => {
+tony.on("message", message => {
 if (message.content === prefix +"help") {
 const embed = new Discord.MessageEmbed()
 .setColor("BLACK")
@@ -56,44 +56,44 @@ const embed = new Discord.MessageEmbed()
 **[ click here ](https://discord.gg/3wykSpqjZq)**
  `)
     
-    .setFooter(` System bot ✨ | Coded by , JANO`, jano.user.avatarURL)
+    .setFooter(` System bot ✨ | Coded by , tony`, tony.user.avatarURL)
     .setURL("https://discord.gg/3wykSpqjZq")
       
     message.channel.send(embed);
-      message.react("<a:jano_27:799630916820795422>");
+      message.react("");
   }
 });
 //////////////
 
 /////////// code welcome
-jano.on("guildMemberAdd", member => {
+tony.on("guildMemberAdd", member => {
   const channel = member.guild.channels.cache.find(
     channel => channel.name === "𝐖𝐞𝐥𝐜𝐨𝐦𝐞"
   );
-  let jano = member.user.avatarURL();
+  let tony = member.user.avatarURL();
   if (!channel) return;
   const joinembed = new Discord.MessageEmbed()
     .setTitle(
-      `<a:jano_10:799629559217389608>**A new member just arrived**<a:jano_10:799629559217389608>`
+      `**A new member just arrived**`
     )
     .setColor("RANDOM")
-    .setThumbnail(jano)
+    .setThumbnail(tony)
     .addField(
-      "<a:jano_28:799630995317850152>| **name** : ",
+      "| **name** : ",
       `${member}
     · · • • • ✤ • • • · ·`
     )
     .addField(
-      "<a:jano_13:804354511355117598>| **Welcome**",
+      "| **Welcome**",
       `Welcome to the server, ${member}
     · · • • • ✤ • • • · ·`
     )
     .addField(
-      "<a:jano_14:804354530606186527><a:jano_15:804354549653438534>| **User** :",
+      "| **User** :",
       "**[" + `${member.id}` + "]**"
     )
     .addField(
-      "<a:jano_10:799629559217389608>| **Your are the member**<a:jano_10:799629559217389608>",
+      "| **Your are the member**",
       `${member.guild.memberCount}
       · · • • • ✤ • • • · ·`
     )
@@ -108,11 +108,11 @@ jano.on("guildMemberAdd", member => {
   channel.send(joinembed);
 });
 ////////////// code left
-jano.on("guildMemberRemove", member => {
+tony.on("guildMemberRemove", member => {
   const channel = member.guild.channels.cache.find(
     channel => channel.name === "𝐋𝐞𝐟𝐭"
   );
-  let jano = member.user.avatarURL();
+  let tony = member.user.avatarURL();
   if (!channel) return;
   const joinembed = new Discord.MessageEmbed()
     .setTitle(
@@ -122,10 +122,10 @@ jano.on("guildMemberRemove", member => {
       "https://thumbs.gfycat.com/ChiefBiodegradableAmericanalligator-size_restricted.gif"
     )
     .setColor("RANDOM")
-    .setThumbnail(jano)
+    .setThumbnail(tony)
     .addField("👥|𝐍𝐀𝐌𝐄:", `${member}`)
-    .addField("<a:jano_13:799300705323188285>├baxerche mle shkaw┤<a:jano_13:799300705323188285>", `!`)
-    .addField("✶⊶⊷⊶⊷❍⊶⊷⊶⊷✶;(",   "<a:jano_12:799299644055748632>naya aw servera<a:jano_12:799299644055748632>")
+    .addField("├baxerche mle shkaw┤", `!`)
+    .addField("✶⊶⊷⊶⊷❍⊶⊷⊶⊷✶;(",   "")
     .addField(
       "⳺☟مــیــمــبەرەکــان ماوە⳻",
       `${member.guild.memberCount}` + " ڪــەس"
@@ -135,7 +135,7 @@ jano.on("guildMemberRemove", member => {
   channel.send(joinembed);
 });
 /////////////// code embed
-jano.on("guildMemberAdd", member => {
+tony.on("guildMemberAdd", member => {
   const joinembed = new Discord.MessageEmbed()
 
     .setColor("RANDOM")
@@ -143,21 +143,21 @@ jano.on("guildMemberAdd", member => {
       `__**A new member just arrived!**__`
     )
     .addField(
-      "<a:jano_28:799630995317850152>| name : ",
+      "| name : ",
       `${member}
     · · • • • ✤ • • • · ·`
     )
     .addField(
-      "<a:jano_28:799630995317850152>| Welcome",
+      "| Welcome",
       `Welcome to the server, ${member}
     · · • • • ✤ • • • · ·`
     )
     .addField(
-      " <a:jano_16:799306063714451476>| User :",
+      "| User :",
       "**[" + `${member.id}` + "]**"
     )
     .addField(
-      "<a:jano_16:799306063714451476>| Your are the member",
+      "| Your are the member",
       `${member.guild.memberCount}
       · · • • • ✤ • • • · ·`
     )
