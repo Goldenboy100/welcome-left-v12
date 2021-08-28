@@ -21,11 +21,11 @@ const listener = app.listen(process.env.PORT, () => {
 
 const Discord = require ("discord.js")
 const moment = require ("moment")
-const jano = new Discord.Client();
+const tony = new Discord.Client();
 const prefix = "w!";
 
 
-tony.login("Nzk5MjI4MTc5Nzg0Nzk0MTgz.YAAhPw.G1toaOZWt7G_qGob9xqSoGA96co");
+tony.login("Nzk5MjI4MTc5Nzg0Nzk0MTgz.YAAhPw.G1toaOZWt7G_qGob9xqSoGA96co"); /////token lera dane
 tony.on("ready", async () => {
   console.log(`Logged in as ${tony.user.username}!`);
  tony.user.setStatus("ONLINE");
